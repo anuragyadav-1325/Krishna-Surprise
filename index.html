@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Krishna Janmashtami 💙✨</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CANVAS — floating particles & petals (global, behind pages)
+  ============================================================ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ============================================================
+       FLOATING MUSIC CONTROLLER
+  ============================================================ -->
+  <div id="musicController" class="music-controller" aria-label="Music Controller">
+    <button id="musicBtn" class="music-btn" aria-label="Play Music">
+      <span class="music-icon">🎵</span>
+      <span class="music-label" id="musicLabel">Play Music</span>
+    </button>
+    <audio id="bgMusic" loop preload="none" src="assets/music.mp3"></audio>
+  </div>
+
+  <!-- ============================================================
+       PAGE 1 — OPENING SURPRISE
+  ============================================================ -->
+  <section class="page active" id="page1">
+
+    <!-- decorative background layers -->
+    <div class="bg-layer bg-stars"></div>
+    <div class="bg-layer bg-moon"></div>
+    <div class="bg-layer bg-flowers-bottom"></div>
+    <div class="bg-layer bg-glow-center"></div>
+
+    <div class="page-content page1-content">
+      <div class="page1-badge">🪔</div>
+      <h1 class="page1-preheading animate-fade-up">✨ A Little Surprise For You ✨</h1>
+      <p class="page1-subtext animate-fade-up delay-1">
+        A small journey through devotion, love<br class="br-desktop" /> and beautiful memories&hellip;
+      </p>
+
+      <div class="divider-ornament animate-fade-up delay-2">
+        <span class="ornament-line"></span>
+        <span class="ornament-icon">🌸</span>
+        <span class="ornament-line"></span>
+      </div>
+
+      <button class="btn btn-primary animate-fade-up delay-3" id="startBtn">
+        <span class="btn-sparkle">💫</span>
+        CLICK HERE TO VIEW THE SURPRISE
+        <span class="btn-sparkle">💫</span>
+      </button>
+
+      <button class="btn btn-music-page1 animate-fade-up delay-4" id="musicBtnPage1" aria-label="Play Music">
+        🎵 Play Music
+      </button>
+
+      <p class="page1-hint animate-fade-up delay-5">Press play to enhance the experience</p>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       PAGE 2 — RADHA
+  ============================================================ -->
+  <section class="page" id="page2">
+
+    <div class="bg-layer bg-stars"></div>
+    <div class="bg-layer bg-flowers-bottom"></div>
+    <div class="bg-layer bg-glow-left"></div>
+
+    <div class="page-content page-two-col">
+
+      <!-- LEFT: Image -->
+      <div class="col-image col-image-left" id="radhaImageCol">
+        <div class="image-frame image-frame-radha">
+          <div class="frame-corner fc-tl"></div>
+          <div class="frame-corner fc-tr"></div>
+          <div class="frame-corner fc-bl"></div>
+          <div class="frame-corner fc-br"></div>
+          <img
+            src="assets/radha.png"
+            alt="Radha — Pure Love, Pure Devotion"
+            class="hero-image"
+            id="radhaImg"
+            draggable="false"
+          />
+          <div class="image-glow"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Text -->
+      <div class="col-text col-text-right">
+        <span class="chapter-badge">🌸 RADHA 🌸</span>
+        <h2 class="page-title">Pure Love.<br/>Pure Devotion.</h2>
+
+        <div class="divider-ornament">
+          <span class="ornament-line"></span>
+          <span class="ornament-icon">✦</span>
+          <span class="ornament-line"></span>
+        </div>
+
+        <p class="page-body">
+          Radha represents pure love, devotion and a heart completely devoted to Krishna.
+          Her love is remembered as a symbol of selfless devotion, faith and a beautiful
+          spiritual bond.
+        </p>
+
+        <div class="quote-block">
+          <p class="quote-text">
+            "Some bonds are remembered not only for their beauty,<br/>
+            but for the devotion behind them."
+          </p>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-ghost" id="backBtn2">← BACK</button>
+          <button class="btn btn-primary" id="nextBtn2">
+            CONTINUE TO KRISHNA &rarr;
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAGE 3 — KRISHNA
+  ============================================================ -->
+  <section class="page" id="page3">
+
+    <div class="bg-layer bg-stars"></div>
+    <div class="bg-layer bg-flowers-bottom"></div>
+    <div class="bg-layer bg-glow-right"></div>
+
+    <div class="page-content page-two-col page-two-col-reverse">
+
+      <!-- LEFT: Text -->
+      <div class="col-text col-text-left">
+        <span class="chapter-badge chapter-badge-blue">💙 KRISHNA 💙</span>
+        <h2 class="page-title">Love, Grace<br/>&amp; Divine Joy</h2>
+
+        <div class="divider-ornament">
+          <span class="ornament-line"></span>
+          <span class="ornament-icon">✦</span>
+          <span class="ornament-line"></span>
+        </div>
+
+        <p class="page-body">
+          Krishna represents love, compassion, joy and divine grace.
+          Together, Radha and Krishna are remembered as a beautiful symbol of
+          devotion, harmony and an eternal spiritual bond.
+        </p>
+
+        <div class="quote-block">
+          <p class="quote-text">
+            "Some stories become timeless because the emotions<br/>
+            behind them never fade."
+          </p>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-ghost" id="backBtn3">← BACK</button>
+          <button class="btn btn-love" id="nextBtn3">
+            ❤️ LOVE ❤️
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT: Image -->
+      <div class="col-image col-image-right" id="krishnaImageCol">
+        <div class="image-frame image-frame-krishna">
+          <div class="frame-corner fc-tl"></div>
+          <div class="frame-corner fc-tr"></div>
+          <div class="frame-corner fc-bl"></div>
+          <div class="frame-corner fc-br"></div>
+          <img
+            src="assets/krishna.png"
+            alt="Krishna — Love, Grace & Divine Joy"
+            class="hero-image"
+            id="krishnaImg"
+            draggable="false"
+          />
+          <div class="image-glow"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAGE 4 — OUR SPECIAL MOMENT
+  ============================================================ -->
+  <section class="page" id="page4">
+
+    <div class="bg-layer bg-stars"></div>
+    <div class="bg-layer bg-moon-soft"></div>
+    <div class="bg-layer bg-flowers-bottom"></div>
+    <div class="bg-layer bg-flowers-top"></div>
+    <div class="bg-layer bg-glow-center-gold"></div>
+
+    <div class="page-content page4-content">
+
+      <!-- Photo -->
+      <div class="photo-frame-wrapper animate-reveal" id="ourPhotoWrapper">
+        <div class="photo-frame">
+          <div class="frame-corner fc-tl"></div>
+          <div class="frame-corner fc-tr"></div>
+          <div class="frame-corner fc-bl"></div>
+          <div class="frame-corner fc-br"></div>
+          <img
+            src="assets/our-photo.png"
+            alt="Our Special Moment — Happy Krishna Janmashtami"
+            class="our-photo"
+            id="ourPhoto"
+            draggable="false"
+          />
+          <div class="photo-glow"></div>
+        </div>
+        <div class="photo-hearts">
+          <span class="ph ph1">💙</span>
+          <span class="ph ph2">🌸</span>
+          <span class="ph ph3">✨</span>
+          <span class="ph ph4">💙</span>
+          <span class="ph ph5">🌸</span>
+        </div>
+      </div>
+
+      <!-- Wishes Card — heading only -->
+      <div class="wishes-card animate-fade-up-delay" id="wishesCard">
+        <h2 class="wishes-heading">✨ Happy Krishna Janmashtami ✨</h2>
+      </div>
+
+      <!-- Exit button -->
+      <button class="btn btn-exit animate-fade-up-delay" id="exitBtn">
+        🌸 EXIT SURPRISE 🌸
+      </button>
+
+      <!-- Exit message (hidden until needed) -->
+      <p class="exit-msg" id="exitMsg" aria-live="polite"></p>
+
+      <!-- Back button -->
+      <button class="btn btn-ghost btn-back-final" id="backBtn4">← BACK</button>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
